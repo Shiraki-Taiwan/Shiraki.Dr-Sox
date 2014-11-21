@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="KeyWords" content="五指襪,除臭襪子,除臭,襪子,竹炭襪,除臭襪,健康襪" />
+    <meta content="博士健康除臭襪100%台灣襪子生產，80%以上天然竹炭,可有效去除腳臭、產品有SGS國際認證+TTRI紡織認證!" />
+    <title>@ViewBag.Title - 博士襪 Dr.Sox 官方訂購網站</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        body {
+            background-color: #71d2ff;
+        }
+
+        .body-content {
+            background-image: url('/Content/Images/bg.jpg');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: -37px;
+        }
+
+        .main-banner {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .content {
+            position: relative;
+            width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            background-position: top center;
+        }
+
+            .content .event1 {
+                width: 980px;
+                height: 132px;
+                padding: 65px 0 0 36px;
+                background-image: url('/Content/Images/drsox_02.jpg');
+                background-repeat: no-repeat;
+                background-position: top center;
+            }
+    </style>
+</head>
+<body data-feedly-mini="yes">
+    <div id="adbg">
+
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="padding: 5px;" href="@Url.Action("Index", "Home")"><img src="~/Content/Images/pu_a_01.gif" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                        <li>@Html.ActionLink("關於", "About", "Home")</li>
+                        <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>*@
+                    <li>@Html.ActionLink("馬上訂購", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("腳臭因素", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("客戶見證", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("獨步創新", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="main-banner">
+            <img src="~/Content/Images/drsox_01.jpg" border="0" usemap="#Map" />
+            <map name="Map" id="Map">
+                <area alt="馬上訂購！脫離腳臭" shape="poly" coords="749,194,661,135,692,141,696,62,779,10,833,103" href="#a" />
+            </map>
+        </div>
+        <div class="content">
+            <div class="event1">
+
+            </div>
+        </div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
