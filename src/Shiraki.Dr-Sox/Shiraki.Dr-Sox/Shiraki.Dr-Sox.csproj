@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -158,15 +160,19 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contexts\DrSoxDb.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ShopViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -174,13 +180,39 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\buy_01a.gif" />
+    <Content Include="Content\Images\buy_01b.gif" />
+    <Content Include="Content\Images\buy_02a.gif" />
+    <Content Include="Content\Images\buy_02b.gif" />
+    <Content Include="Content\Images\buy_03a.gif" />
+    <Content Include="Content\Images\buy_03b.gif" />
     <Content Include="Content\Images\drsox_01.jpg" />
     <Content Include="Content\Images\drsox_02.jpg" />
+    <Content Include="Content\Images\drsox_03.jpg" />
+    <Content Include="Content\Images\drsox_04.jpg" />
+    <Content Include="Content\Images\drsox_05.jpg" />
+    <Content Include="Content\Images\drsox_06.jpg" />
+    <Content Include="Content\Images\drsox_07.jpg" />
+    <Content Include="Content\Images\drsox_08.jpg" />
+    <Content Include="Content\Images\drsox_09.jpg" />
+    <Content Include="Content\Images\drsox_10.jpg" />
+    <Content Include="Content\Images\drsox_10_ad.jpg" />
+    <Content Include="Content\Images\drsox_11a.jpg" />
+    <Content Include="Content\Images\drsox_11c.jpg" />
+    <Content Include="Content\Images\drsox_12.jpg" />
+    <Content Include="Content\Images\drsox_13.jpg" />
+    <Content Include="Content\Images\d_bg.gif" />
+    <Content Include="Content\Images\icon_hot.gif" />
+    <Content Include="Content\Images\icon_new.gif" />
+    <Content Include="Content\Images\index6_hd.jpg" />
+    <Content Include="Content\Images\index6_hd2.jpg" />
+    <Content Include="Content\Images\label_new_red.png" />
     <Content Include="Content\Images\pu_a_01.gif" />
     <Content Include="Content\Images\pu_a_03.gif" />
     <Content Include="Content\Images\pu_a_04.gif" />
     <Content Include="Content\Images\pu_a_05.gif" />
     <Content Include="Content\Images\pu_a_06.gif" />
+    <Content Include="Content\reset.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -198,6 +230,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ZipCode.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -234,6 +267,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,6 +279,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shiraki.Dr-Sox.Biz\Shiraki.Dr-Sox.Biz.csproj">
+      <Project>{a68adf04-e263-45f6-970c-0d7831305fe8}</Project>
+      <Name>Shiraki.Dr-Sox.Biz</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

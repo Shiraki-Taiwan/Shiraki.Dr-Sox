@@ -21,9 +21,11 @@ namespace Shiraki.Dr_Sox
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/ZipCode.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/reset.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

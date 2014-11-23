@@ -42,16 +42,10 @@
                 <area alt="馬上訂購！脫離腳臭" shape="poly" coords="749,194,661,135,692,141,696,62,779,10,833,103" href="@Url.Action("Index", "Shop")" />
             </map>
         </div>
+        <div class="content">
+            @RenderBody()
+        </div>
         @*<hr /><footer><p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p></footer>*@
-    </div>
-    <div class="content">
-        <div class="event-sub-title">
-
-        </div>
-        @RenderBody()
-        <div class="event-ad">
-
-        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

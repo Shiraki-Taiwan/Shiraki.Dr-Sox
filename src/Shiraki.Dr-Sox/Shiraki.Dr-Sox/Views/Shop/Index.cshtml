@@ -1,0 +1,169 @@
+﻿@model Shiraki.Dr_Sox.Models.ShopViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="event10b">
+        <div class="event10">
+            <ul class="product-list">
+                @for (var i = 0; i < Model.Products.Count(); i++)
+                {
+                    <li>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td class="data-header">
+                                        <span>@Model.Products[i].Code</span>&nbsp;<span>@Model.Products[i].Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="data-picture" style="background-image: url('@Model.Products[i].Picture')">
+                                            @if (Model.Products[i].IsNew)
+                                            {
+                                                <div class="icon-new"></div>
+                                            }
+                                            else if (Model.Products[i].IsHot)
+                                            {
+                                                <div class="icon-hot"></div>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="data-option">
+                                        售價：<span class="data-price">@Model.Products[i].Price</span>元/雙<br />
+                                        數量：@Html.DropDownListFor(e => Model.Products[i].Amount, Storage.ShopAmount.Select(e => new SelectListItem() { Text = e.Value, Value = e.Key }))
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.HiddenFor(e => Model.Products[i].Id)
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="event10c">
+
+    </div>
+    <div class="event12 text_p2" style="padding-top: 68px">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="80" />
+                <col width="160" />
+                <col width="80" />
+                <col width="160" />
+                <col />
+            </colgroup>
+            <tbody>
+                <tr style="height: 32px;">
+                    <td>* 訂購者姓名</td>
+                    <td>@Html.EditorFor(e => e.Order.Name)</td>
+                    <td>* 聯絡電話</td>
+                    <td>@Html.EditorFor(e => e.Order.PhoneNumber)</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 行動電話</td>
+                    <td colspan="4">
+                        @Html.EditorFor(e => e.Order.MobileNumber)
+                        <span>請填寫聯絡的到的電話，訂購後會由客服人員與您確認訂單內容</span>
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 電子郵件</td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.Email, new { @class = "email" })
+                        <span>填寫正確且經常使用的電子郵件，以此作出貨依據原則</span>
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 收貨人姓名</td>
+                    <td colspan="4">
+                        @Html.EditorFor(e => e.Order.RecipientName)
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 送貨地址</td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.RecipientAreaCode, new { @class = "area-code", disabled = "disabled" })
+                        <select name="@Html.NameFor(e => e.Order.RecipientCity)" class="ddl-city">
+                            <option value="請選擇">請選擇</option>
+                            <option value="臺北市">臺北市</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="桃園縣">桃園縣</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="臺中市">臺中市</option>
+                            <option value="臺中市">臺中市</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="臺南市">臺南市</option>
+                            <option value="臺南市">臺南市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="澎湖縣">澎湖縣</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="臺東縣">臺東縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="金門縣">金門縣</option>
+                            <option value="連江縣">連江縣</option>
+                            <option value="南海諸島">南海諸島</option>
+                            <option value="釣魚台列嶼">釣魚台列嶼</option>
+                        </select>
+                        縣/市
+                        <select name="aTownsCName" class="form1" id="aTownsCName" onchange="showZipCode(form1.aCityCName, form1.aTownsCName, form1.aArea, form1.addressx, form1.county)">
+                            <option value="請選擇">請選擇</option>
+                        </select>
+                        鄉鎮區市（選擇地區後請記得在下個欄位輸入詳細地址）
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td></td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.RecipientAddr, new { @class = "address" })
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 備　　註</td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.Memo, new { @class = "memo" })
+                    </td>
+                </tr>
+                <tr style="height: 32px;" class="text_p5">
+                    <td></td>
+                    <td colspan="4">
+                        ■ 您完成購物後，我們會寄發一封出貨通知電子郵件與您確認
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                    <td colspan="3" height="2"></td>
+                </tr>
+                <tr>
+                    <td width="225">
+                        <button type="reset" class="reset"></button>
+                    </td>
+                    <td width="50">&nbsp;</td>
+                    <td width="225">
+                        <button type="submit" class="submit"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

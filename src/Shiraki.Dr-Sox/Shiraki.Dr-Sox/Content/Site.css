@@ -1,4 +1,5 @@
 ﻿body {
+    background-color: #71d2ff;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -7,6 +8,10 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-image: url('Images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -37px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +27,504 @@ select,
 textarea {
     max-width: 280px;
 }
+
+a.anchor {
+    position: absolute;
+    margin-top: -60px;
+}
+
+.main-banner {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: top center;
+}
+
+    .content td {
+        vertical-align: top;
+    }
+
+    .content .event1 {
+        width: 980px;
+        height: 132px;
+        padding: 65px 0 0 36px;
+        background-image: url('Images/drsox_02.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+        .content .event1 a.buy-now {
+            width: 220px;
+            height: 54px;
+            display: block;
+            text-indent: -9999px;
+            background-size: cover;
+            background-image: url('Images/buy_01a.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+            .content .event1 a.buy-now:hover {
+                background-image: url('Images/buy_01b.gif');
+            }
+
+
+    .content .event2 {
+        width: 980px;
+        height: 346px;
+        padding: 58px 0 0 36px;
+        background-image: url('Images/drsox_03.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event3 {
+        width: 980px;
+        height: 436px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_04.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event4 {
+        width: 980px;
+        height: 724px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_05.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event5 {
+        width: 980px;
+        height: 344px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_06.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event6 {
+        width: 980px;
+        height: 324px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_07.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event7 {
+        width: 980px;
+        height: 295px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_08.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event8 {
+        width: 980px;
+        height: 643px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_09.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event9 {
+        width: 980px;
+        height: 328px;
+        background-image: url('Images/drsox_10.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event10 {
+        top: 0;
+        margin: 0;
+        width: 980px;
+        background-image: url('Images/d_bg.gif');
+        background-repeat: repeat-y;
+        background-position: top center;
+    }
+
+    .content .event-sub-title {
+        float: left;
+        width: 980px;
+        height: 74px;
+        background-image: url('Images/drsox_11a.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+    }
+
+    .content .event10 {
+    }
+
+    .content .event10b {
+        float: left;
+        padding: 8px 0;
+        background-image: url('Images/d_bg.gif');
+        background-repeat: repeat-y;
+        background-position: top center;
+        position: relative;
+    }
+
+    .content .event10c {
+        float: left;
+        width: 980px;
+        height: 29px;
+        margin: 0;
+        background-image: url('Images/drsox_11c.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+    }
+
+    .content .event11 {
+        float: left;
+        width: 980px;
+        height: 247px;
+        padding: 0 0 0 36px;
+        background-image: url('Images/drsox_12.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event12 {
+        float: left;
+        width: 980px;
+        padding: 0 0 0 36px;
+        height: 485px;
+        background-image: url('Images/drsox_13.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .content .event-ad {
+        float: left;
+        width: 980px;
+        height: 215px;
+        background-image: url('Images/drsox_10_ad.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+    }
+
+.text_p1 {
+    font-size: 13px;
+    color: #838182;
+    line-height: 18px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_p2 {
+    vertical-align: top;
+    font-size: 13px;
+    color: #838182;
+    line-height: 18px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_p3 {
+    font-size: 13px;
+    color: #5b5c5c;
+    line-height: 20px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_p4 {
+    font-size: 13px;
+    color: #FFF;
+    line-height: 20px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_p5 {
+    font-size: 13px;
+    color: #F00;
+    line-height: 20px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_pr {
+    font-size: 12px;
+    color: #838182;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_bw {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 22px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_bb {
+    font-size: 16px;
+    color: #000000;
+    line-height: 22px;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_br {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c91717;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_sy {
+    font-size: 13px;
+    color: #ffba00;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_sw {
+    font-size: 12px;
+    color: #fdecf2;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 4px;
+}
+
+.text_sw2 {
+    font-size: 12px;
+    color: #65203c;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 4px;
+}
+
+.text_sp {
+    font-size: 12px;
+    color: #ec8daf;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.text_so {
+    font-size: 12px;
+    color: #231300;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    line-height: 16px;
+}
+
+.text_sb {
+    font-size: 12px;
+    color: #1a52a7;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-bottom: 0px;
+}
+
+.text_sr {
+    font-size: 12px;
+    line-height: 20px;
+    color: #e60000;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-top: 1px;
+    padding-bottom: 0px;
+}
+
+.text_nw {
+    font-size: 12px;
+    line-height: 24px;
+    color: #f8f8f6;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_mg {
+    font-size: 12px;
+    line-height: 24px;
+    color: #b5b599;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-left: 22px;
+}
+
+.text_ng {
+    font-size: 12px;
+    line-height: 24px;
+    color: #b5b599;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+}
+
+.text_mb {
+    text-indent: inherit;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fffee0;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.text_my {
+    text-indent: inherit;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ebeb05;
+    text-decoration: none;
+    font-family: Arial, 細明體;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+ul.product-list {
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+    ul.product-list li {
+        float: left;
+        list-style: none;
+        margin: 5px 10px;
+    }
+
+    ul.product-list .data-header {
+        background-color: #585858;
+        background-image: url('Images/index6_hd2.jpg');
+        background-repeat: no-repeat;
+        height: 34px;
+        width: 280px;
+        text-align: center;
+        font-weight: bold;
+        color: #FFFFFF;
+        padding: 5px 0;
+    }
+
+    ul.product-list .data-picture {
+        width: 280px;
+        height: 231px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid #A0A0A0;
+    }
+
+    ul.product-list .icon-new {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 64px;
+        height: 64px;
+        background-image: url('Images/label_new_red.png');
+        background-size: cover;
+    }
+
+    ul.product-list .icon-hot {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 64px;
+        height: 64px;
+        background-image: url('Images/icon_hot.gif');
+        background-size: cover;
+    }
+
+
+    ul.product-list .data-option {
+        font-weight: bold;
+        color: #545454;
+        background-color: #d5d5d5;
+        padding-top: 10px;
+        padding-right: 7px;
+        padding-bottom: 10px;
+        padding-left: 7px;
+    }
+
+    ul.product-list .data-price {
+        color: #bf2e2e;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+
+input.email {
+    width: 200px;
+}
+
+input.area-code {
+    width: 60px;
+}
+
+input.address, input.memo {
+    width: 280px;
+}
+
+button.reset {
+    border-width: 0;
+    width: 225px;
+    height: 53px;
+    background-image: url('Images/buy_02a.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    button.reset:hover {
+        background-image: url('Images/buy_02b.gif');
+    }
+
+button.submit {
+    border-width: 0;
+    width: 225px;
+    height: 53px;
+    background-image: url('Images/buy_03a.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    button.submit:hover {
+        background-image: url('Images/buy_03b.gif');
+    }
