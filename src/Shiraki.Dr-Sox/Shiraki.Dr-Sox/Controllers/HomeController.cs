@@ -37,6 +37,11 @@ namespace Shiraki.Dr_Sox.Controllers
             return View(model);
         }
 
+        public ActionResult Order(ShopViewModels model)
+        {
+            return View(model);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

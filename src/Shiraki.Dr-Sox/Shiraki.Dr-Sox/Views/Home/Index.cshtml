@@ -348,10 +348,11 @@
         </tbody>
     </table>
 </div>
+<div class="event-ad"></div>
 <div class="event-sub-title">
 
 </div>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Order", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     <div class="event10b">
@@ -490,6 +491,5 @@
 }
 @*<div class="event9"></div>*@
 @*<div class="event10"></div>*@
-<div class="event-ad">
-
-</div>
+<div class="event-faq"></div>
+<div class="event-faq-bottom"></div>

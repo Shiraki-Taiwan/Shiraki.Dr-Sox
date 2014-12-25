@@ -180,6 +180,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\body_bg01.jpg" />
     <Content Include="Content\Images\buy_01a.gif" />
     <Content Include="Content\Images\buy_01b.gif" />
     <Content Include="Content\Images\buy_02a.gif" />
@@ -207,11 +208,13 @@
     <Content Include="Content\Images\index6_hd.jpg" />
     <Content Include="Content\Images\index6_hd2.jpg" />
     <Content Include="Content\Images\label_new_red.png" />
+    <Content Include="Content\Images\order_hd.jpg" />
     <Content Include="Content\Images\pu_a_01.gif" />
     <Content Include="Content\Images\pu_a_03.gif" />
     <Content Include="Content\Images\pu_a_04.gif" />
     <Content Include="Content\Images\pu_a_05.gif" />
     <Content Include="Content\Images\pu_a_06.gif" />
+    <Content Include="Content\Images\QA.jpg" />
     <Content Include="Content\reset.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -269,6 +272,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Home\Order.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
