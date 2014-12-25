@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Shiraki.Dr_Sox.Models.ShopViewModels
+
+@{
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
     ViewBag.Title = "首頁";
 }
@@ -346,6 +348,146 @@
         </tbody>
     </table>
 </div>
+<div class="event-sub-title">
+
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="event10b">
+        <div class="event10">
+            <ul class="product-list">
+                @for (var i = 0; i < Model.Products.Count(); i++)
+                {
+                    <li>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td class="data-header">
+                                        <span>@Model.Products[i].Code</span>&nbsp;<span>@Model.Products[i].Name</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="data-picture" style="background-image: url('@Model.Products[i].Picture')">
+                                            @if (Model.Products[i].IsNew)
+                                            {
+                                                <div class="icon-new"></div>
+                                            }
+                                            else if (Model.Products[i].IsHot)
+                                            {
+                                                <div class="icon-hot"></div>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="data-option">
+                                        售價：<span class="data-price">@Model.Products[i].Price</span>元/雙<br />
+                                        數量：@Html.DropDownListFor(e => Model.Products[i].Amount, Storage.ShopAmount.Select(e => new SelectListItem() { Text = e.Value, Value = e.Key }))
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        @Html.HiddenFor(e => Model.Products[i].Id)
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="event10c">
+
+    </div>
+    <div class="event12 text_p2" style="padding-top: 68px">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <colgroup>
+                <col width="80" />
+                <col width="160" />
+                <col width="80" />
+                <col width="160" />
+                <col />
+            </colgroup>
+            <tbody>
+                <tr style="height: 32px;">
+                    <td>* 訂購者姓名</td>
+                    <td>@Html.EditorFor(e => e.Order.Name)</td>
+                    <td>* 聯絡電話</td>
+                    <td>@Html.EditorFor(e => e.Order.PhoneNumber)</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 行動電話</td>
+                    <td colspan="4">
+                        @Html.EditorFor(e => e.Order.MobileNumber)
+                        <span>請填寫聯絡的到的電話，訂購後會由客服人員與您確認訂單內容</span>
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 電子郵件</td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.Email, new { @class = "email" })
+                        <span>填寫正確且經常使用的電子郵件，以此作出貨依據原則</span>
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 收貨人姓名</td>
+                    <td colspan="4">
+                        @Html.EditorFor(e => e.Order.RecipientName)
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 送貨地址</td>
+                    <td colspan="4">
+                        <input class="area-code" type="text" disabled="disabled" />
+                        <select class="ddl-city"></select>
+                        縣/市
+                        <select class="ddl-town">
+                            <option value="請選擇">請選擇</option>
+                        </select>
+                        鄉鎮區市（選擇地區後請記得在下個欄位輸入詳細地址）
+                        <input name="@Html.NameFor(e => e.Order.RecipientAreaCode)" type="hidden" class="area-code" value="" />
+                        <input name="@Html.NameFor(e => e.Order.RecipientCity)" type="hidden" class="txt-city" value="" />
+                        <input name="@Html.NameFor(e => e.Order.RecipientTown)" type="hidden" class="txt-town" value="" />
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td></td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.RecipientAddr, new { @class = "address" })
+                    </td>
+                </tr>
+                <tr style="height: 32px;">
+                    <td>* 備　　註</td>
+                    <td colspan="4">
+                        @Html.TextBoxFor(e => e.Order.Memo, new { @class = "memo" })
+                    </td>
+                </tr>
+                <tr style="height: 32px;" class="text_p5">
+                    <td></td>
+                    <td colspan="4">
+                        ■ 您完成購物後，我們會寄發一封出貨通知電子郵件與您確認
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+            <tbody>
+                <tr>
+                    <td colspan="3" height="2"></td>
+                </tr>
+                <tr>
+                    <td width="225">
+                        <button type="reset" class="reset"></button>
+                    </td>
+                    <td width="50">&nbsp;</td>
+                    <td width="225">
+                        <button type="submit" class="submit"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
 @*<div class="event9"></div>*@
 @*<div class="event10"></div>*@
 <div class="event-ad">
