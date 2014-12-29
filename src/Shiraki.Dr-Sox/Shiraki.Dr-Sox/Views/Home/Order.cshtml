@@ -51,175 +51,34 @@
                 @Html.AntiForgeryToken()
 
                 <div class="row">
-                    <div class="form-horizontal">
-                        <h4>ShopViewModels</h4>
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <h2 style="line-height: normal;">Dr.Sox博士襪 購物明細</h2>
                         <hr />
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Create" class="btn btn-default" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="info" style="margin-right: 33px; margin-left: 33px; margin-top: 25px; color: #090909;">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td>
+                        <div class="form-horizontal">
+                            <div class="form-group">
                                 <!--購物明細-->
-                                <h2 style="line-height: normal;">Dr.Sox博士襪 購物明細</h2>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="5" style="border-top-width: 3px; border-bottom-width: 2px; border-top-style: solid; border-bottom-style: solid; border-top-color: #9bb56c; border-bottom-color: #9bb56c; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; border-right-color: #9bb56c; border-left-color: #9bb56c;">
-                                    <tr style="background-color: #749C1F; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #9bb56c; padding: 5px; color: #FFFFFF;">
-                                        <th width="60%">商品名稱</th>
-                                        <th align="center">單價</th>
-                                        <th align="center">數量</th>
-                                        <th align="center">小計</th>
+                                <table class="table table-responsive table-hover">
+                                    <colgroup>
+                                        <col />
+                                        <col style="text-align: center;" />
+                                        <col style="text-align: center;" />
+                                        <col style="text-align: center;" />
+                                    </colgroup>
+                                    <tr class="table-header">
+                                        <th>商品名稱</th>
+                                        <th>單價</th>
+                                        <th>數量</th>
+                                        <th>小計</th>
                                     </tr>
-                                    <tr>
-                                        <td>SE01 全竹炭刺繡男休閒襪 (黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SE02 全竹炭刺繡男休閒襪 (淺灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE03 奈米竹炭刺繡寬口襪 (黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SE04 奈米竹炭刺繡寬口襪 (深灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE05 竹炭寬口條紋休長閒襪 (黑/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SE06 竹炭寬口條紋休長閒襪 (淺灰/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE07 竹炭寬口條紋休短閒襪 (黑/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SE08 竹炭寬口條紋休閒短襪 (淺灰/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE09 竹炭寬口條紋休閒短襪 (黑/紫)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL10 竹炭運動氣墊襪 (黑/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SL11 竹炭運動氣墊襪 (時尚黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL12 竹炭運動船型襪 (黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SL13 竹炭無痕健康襪 (黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL14 竹炭無痕健康襪 (灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SL15 竹炭五趾襪 (長/黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL16 竹炭五趾襪 (長/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SL17 竹炭五趾襪 (短/黑)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL18 竹炭五趾襪 (短/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SL19  竹炭運動氣墊襪 (黑/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SL20  竹炭學生運動透氣襪 (白/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE21  竹炭學生運動透氣襪 (白/灰)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr style=" background-color: #F1F9E1;">
-                                        <td>SE22  竹炭流行條紋船型襪 (白條紋)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE23  竹炭流行條紋船型襪 (紅條紋)</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>SE24  舒適無痕健康襪</td>
-                                        <td align="center">120</td>
-                                        <td align="center"></td>
-                                        <td align="center">0</td>
-                                    </tr>
-
+                                    @foreach (var product in Model.Products.Where(e => e.Amount > 0))
+                                    {
+                                        <tr>
+                                            <td>@string.Format("{0} {1}", product.Code, product.Name)</td>
+                                            <td>@product.Price</td>
+                                            <td>@product.Amount</td>
+                                            <td>@(product.Price * product.Amount)</td>
+                                        </tr>
+                                    }
                                 </table>
 
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -250,7 +109,21 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </td>
+                            </div>
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Create" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>

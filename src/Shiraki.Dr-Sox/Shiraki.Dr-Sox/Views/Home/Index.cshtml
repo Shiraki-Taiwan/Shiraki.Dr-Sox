@@ -349,12 +349,11 @@
     </table>
 </div>
 <div class="event-ad"></div>
-<div class="event-sub-title">
-
-</div>
+<div class="event-sub-title"></div>
 @using (Html.BeginForm("Order", "Home", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
+    <a name="buy" class="anchor"></a>
     <div class="event10b">
         <div class="event10">
             <ul class="product-list">

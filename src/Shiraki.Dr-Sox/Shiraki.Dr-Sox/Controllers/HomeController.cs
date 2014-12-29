@@ -37,8 +37,29 @@ namespace Shiraki.Dr_Sox.Controllers
             return View(model);
         }
 
+        public ActionResult Order()
+        {
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
         public ActionResult Order(ShopViewModels model)
         {
+            if (model.Products != null && model.Products.Count() > 0)
+            {
+                model.Products = model.Products.Join(db.Products, m => m.Id, p => p.Id, (m, p) => new OrderItem()
+                {
+                    Id = p.Id,
+                    Code = p.Code,
+                    Name = p.Name,
+                    Picture = p.Picture,
+                    Price = p.Price,
+                    Amount = m.Amount,
+                    IsHot = p.IsHot,
+                    IsNew = p.IsNew
+                }).ToList();
+            }
+
             return View(model);
         }
 

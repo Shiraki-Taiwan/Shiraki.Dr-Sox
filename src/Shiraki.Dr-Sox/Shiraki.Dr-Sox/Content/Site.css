@@ -262,6 +262,31 @@ a.anchor {
         max-width: 950px;
     }
 
+        .order-view .content .info {
+            margin-right: 33px;
+            margin-left: 33px;
+            margin-top: 25px;
+            color: #090909;
+        }
+
+        .order-view .content .form-group .table-responsive {
+            border-style: solid;
+            border-width: 3px 1px 2px 1px;
+            border-color: #9bb56c;
+        }
+
+            .order-view .content .form-group .table-responsive tr:nth-child(2n) {
+                background-color: #f1f9e1;
+            }
+
+        .order-view .content .form-group .table-header {
+            background-color: #749C1F;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #9bb56c;
+            padding: 5px;
+            color: #FFFFFF;
+        }
 
 .text_p1 {
     font-size: 13px;

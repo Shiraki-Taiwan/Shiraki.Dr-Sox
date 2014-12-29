@@ -88,7 +88,7 @@ Taiwan.ZipCode[27] = ["290"];
 
     function showZipCode() {
         var idxCity = city.val();
-        var idxTown = town.val();
+        var idxTown = town.val() || 0;
         var zipCode = Taiwan.ZipCode[idxCity][idxTown];
         
         code.val(zipCode);
